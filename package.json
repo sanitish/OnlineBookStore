@@ -1,11 +1,14 @@
 
 {
-  "name": "reduxapp",
-  "version": "0.0.0",
+  "name": "BookStore",
+  "version": "1.0.0",
+  "description": "Simple React BookShop app",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
+  "author": "Nitish Kumar",
+  "license": "MIT",
   "devDependencies": {
     "nodemon": "^1.11.0",
     "redux-logger": "^2.8.1",
