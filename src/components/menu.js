@@ -1,6 +1,6 @@
 "use strict"
 import React from 'react';
-import {Nav, NavItem, Navbar, Badge} from
+import {Nav, NavItem, Navbar, Badge,Image} from
 'react-bootstrap';
 class Menu extends React.Component {
     render() {

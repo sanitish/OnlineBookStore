@@ -23945,53 +23945,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // REACT-ROUTER
 var middleware = (0, _redux.applyMiddleware)(_reduxThunk2.default, (0, _reduxLogger2.default)());
 // IMPORT ACTIONS
-// "use strict"
-// // REACT
-// import React from 'react';
-// import {render} from 'react-dom';
-// import {Provider} from 'react-redux';
-//
-// import {applyMiddleware, createStore} from 'redux';
-// //import logger from 'redux-logger'
-// import thunk from 'redux-thunk';
-//
-// // IMPORT COMBINED REDUCERS
-// import reducers from './reducers/index';
-// // IMPORT ACTIONS
-// import {addToCart} from './actions/cartActions';
-// // STEP 1 create the store
-// //const middleware = applyMiddleware(thunk, createLogger());
-// //const store = createStore(reducers, middleware);
-//
-// import BooksList from './components/pages/bookslist';
-// import Cart from './components/pages/cart';
-// import BooksForm from './components/pages/booksForm';
-// //import Main from './main';
-//
-// // REACT-ROUTER
-// //import {Router, Route, IndexRoute, browserHistory} from 'react-router';
-// import {BrowserRouter, Route, Switch} from 'react-router-dom';
-// import Menu from './components/menu';
-// import Footer from './components/footer';
-//
-// const Routes = (
-//     <Provider store={store}>
-//         <BrowserRouter>
-//             <div>
-//                 <Menu/>
-//                 <Switch>
-//                     <Route exact path="/" component={BooksList}/>
-//                     <Route path="/admin" component={BooksForm}/>
-//                     <Route path="/cart" component={Cart}/>
-//                 </Switch>
-//                 <Footer/>
-//             </div>
-//         </BrowserRouter>
-//     </Provider>
-// )
-//
-// render(Routes, document.getElementById('app'));
-// REACT
 
 var store = (0, _redux.createStore)(_index2.default, middleware);
 
@@ -24180,89 +24133,7 @@ exports.default = Menu;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-// "use strict"
-// import React from 'react';
-// import {Image,Row, Col, Well, Button,image} from
-// 'react-bootstrap';
-// import {connect} from 'react-redux';
-// import {bindActionCreators} from 'redux'
-// import {addToCart, updateCart} from'../../actions/cartActions';
-// class BookItem extends React.Component {
-//     handleCart() {
-//         const book = [
-//             ...this.props.cart, {
-//                 _id: this.props._id,
-//                 title: this.props.title,
-//                 description: this.props.description,
-//                 images: this.props.images,
-//                 price: this.props.price,
-//                 quantity:1
-//             }
-//         ]
-//         if(this.props.cart.length > 0) {
-//         // CART IS NOT EMPTY
-//           let _id = this.props._id;
-//           let cartIndex =
-//           this.props.cart.findIndex(function(cart){
-//             return cart._id === _id;
-//           })
-//         // IF RETURNS -1 THERE ARE NO ITEMS  WITH SAME ID
-//         if (cartIndex === -1){
-//           this.props.addToCart(book);
-//           } else {
-//         // WE NEED TO UPDATE QUANTITY
-//           this.props.updateCart(_id, 1, this.props.cart);
-//           }
-//           } else {
-//         // CART IS EMPTY
-//           this.props.addToCart(book);
-//           }
-//         }
-//
-//         constructor(){
-//           super();
-//           this.state = {
-//             isClicked:false
-//           };
-//         }
-//         onReadMore(){
-//           this.setState({isClicked:true})
-//         }
-//
-//     render() {
-//         return (
-//             <Well>
-//                 <Row>
-//                 <Col xs={12} sm={4}>
-// <Image src={this.props.images} responsive />
-// </Col>
-//                     <Col xs={12}>
-//                         <h6>{this.props.title}</h6>
-//                         <p>{(this.props.description.length > 50 &&
-// this.state.isClicked === false)?(this.props.description.substring(0,50)):(this.props.description)}
-// <button className='link'
-// onClick={this.onReadMore.bind(this)}>{(this.state.isClicked ===false && this.props.description !== null && this.props.description.length > 50)?('...readmore'):('')}
-// </button>
-// </p>
-//                         <h6>INR. {this.props.price}</h6>
-//                         <Button onClick={this.handleCart.bind(this)} bsStyle='primary'>Buy now</Button>
-//                     </Col>
-//                 </Row>
-//             </Well>
-//         )
-//     }
-// }
-// function mapStateToProps(state) {
-//
-//     return {cart: state.cart.cart}
-// }
-// function mapDispatchToProps(dispatch) {
-//     return bindActionCreators({
-//         addToCart: addToCart,
-//         updateCart:updateCart
-//     }, dispatch)
-// }
-// export default connect(mapStateToProps, mapDispatchToProps)(BookItem);
+
 
 
 Object.defineProperty(exports, "__esModule", {
