@@ -65,7 +65,7 @@ class Cart extends React.Component {
                             <span></span>
                         </Col>
                         <Col xs={12} sm={2}>
-                            <h6>usd. {cartArr.price}</h6>
+                            <h6>INR. {cartArr.price}</h6>
                         </Col>
                         <Col xs={12} sm={2}>
                             <h6>qty.

@@ -12912,7 +12912,7 @@ var Cart = function (_React$Component) {
                             _react2.default.createElement(
                                 'h6',
                                 null,
-                                'usd. ',
+                                'INR. ',
                                 cartArr.price
                             )
                         ),
