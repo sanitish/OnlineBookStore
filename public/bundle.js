@@ -24355,12 +24355,12 @@ var BookItem = function (_React$Component) {
                     null,
                     _react2.default.createElement(
                         _reactBootstrap.Col,
-                        { xs: 12, sm: 4 },
+                        { xs: 12, sm: 12 },
                         _react2.default.createElement(_reactBootstrap.Image, { src: this.props.images, responsive: true })
                     ),
                     _react2.default.createElement(
                         _reactBootstrap.Col,
-                        { xs: 4, sm: 8 },
+                        { xs: 12, sm: 12 },
                         _react2.default.createElement(
                             'h6',
                             null,

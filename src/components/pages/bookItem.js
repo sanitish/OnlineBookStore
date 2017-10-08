@@ -133,10 +133,10 @@ class BookItem extends React.Component {
         return (
             <Well>
                 <Row>
-                    <Col xs={12} sm={4}>
+                    <Col xs={12} sm={12}>
                         <Image src={this.props.images} responsive/>
                     </Col>
-                    <Col xs={4} sm={8}>
+                    <Col xs={12} sm={12}>
                         <h6>{this.props.title}</h6>
                         <p>{(this.props.description.length > 50 && this.state.isClicked === false)
                                 ? (this.props.description.substring(0, 50))
@@ -148,7 +148,7 @@ class BookItem extends React.Component {
                         </p>
                         <h6>₹{this.props.price}</h6>
                         <Button onClick={this.handleCart.bind(this)} bsStyle='primary'>AddToCart</Button>
-                    </Col>
+                                </Col>
                 </Row>
             </Well>
         )
