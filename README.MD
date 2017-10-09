@@ -18,7 +18,7 @@ This will serve the application using webpack-dev-server
 Visit http://localhost:3000
 
 ```sh
-$
+$ npm start
 ```
 
 ### Build
