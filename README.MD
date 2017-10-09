@@ -1,2 +1,2 @@
-online book store app.
+online book store app
 start- nodemon/npm start

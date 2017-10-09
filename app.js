@@ -102,7 +102,6 @@ app.put('/books/:_id', function(req, res) {
             price: book.price
         }
     };
-    // When true returns the updated document
     var options = {
         new: true
     };
@@ -114,25 +113,20 @@ app.put('/books/:_id', function(req, res) {
     })
 })
 
-// --->>> GET BOOKS IMAGES API <<<------
-// --->>> GET BOOKS IMAGES API <<<------
+//  GET BOOKS IMAGES API
  app.get('/images', function(req, res){
 
    const imgFolder = __dirname + '/public/images/';
-   // REQUIRE FILE SYSTEM
+
    const fs = require('fs');
-   //READ ALL FILES IN THE DIRECTORY
    fs.readdir(imgFolder, function(err, files){
      if(err){
        return console.error(err);
      }
-     //CREATE AN EMPTY ARRAY
      const filesArr = [];
-     // ITERATE ALL IMAGES IN THE DIRECTORY AND ADD TO THE ARRAY
      files.forEach(function(file){
        filesArr.push({name: file});
      });
-     // SEND THE JSON RESPONSE WITH THE ARARY
      res.json(filesArr);
    })
  })
@@ -145,13 +139,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('*', function(req, res) {
     res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
 })
-// catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
     next(err);
 });
-// error handler
 app.use(function(err, req, res, next) {
     // set locals, only providing error in
     development
@@ -159,7 +151,6 @@ app.use(function(err, req, res, next) {
     res.locals.error = req.app.get('env') === 'development'
         ? err
         : {};
-    // render the error page
     res.status(err.status || 500);
     res.render('error');
 });

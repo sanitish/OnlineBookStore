@@ -1,5 +1,4 @@
 
-"use strict"
 import React from 'react';
 import {Image, Row, Col, Well, Button} from
 'react-bootstrap';
