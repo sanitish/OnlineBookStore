@@ -6208,35 +6208,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; // export function addToCart(book) {
-//     return {type: "ADD_TO_CART", payload: book}
-// }
-//
-// export function deleteCartItem(cart) {
-//     return {type: "DELETE_CART_ITEM", payload: cart}
-// }
-//
-// export function updateCart(_id, unit, cart) {
-//     // Create a copy of the current array of
-//     const currentBookToUpdate = cart
-//     // Determine at which index in books
-//     const indexToUpdate = currentBookToUpdate.findIndex(function(book) {
-//         return book._id === _id;
-//     })
-//     const newBookToUpdate = {
-//         ...currentBookToUpdate[indexToUpdate],
-//         quantity: currentBookToUpdate[indexToUpdate].quantity + unit
-//     }
-//     let cartUpdate = [
-//         ...currentBookToUpdate.slice(0, indexToUpdate),
-//         newBookToUpdate,
-//         ...currentBookToUpdate.slice(indexToUpdate + 1)
-//     ]
-//     return {type: "UPDATE_CART", payload: cartUpdate}
-// }
-
-// GET CART
-
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 exports.getCart = getCart;
 exports.addToCart = addToCart;
@@ -12476,86 +12448,6 @@ module.exports = g;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-// import React from 'react';
-// import {
-//     Well,
-//     Panel,
-//     FormControl,
-//     FormGroup,
-//     ControlLabel,
-//     Button
-// } from 'react-bootstrap';
-// import {connect} from 'react-redux';
-// import {bindActionCreators} from 'redux';
-// import {findDOMNode} from 'react-dom';
-//
-// import {postBooks,deleteBooks} from '../../actions/booksActions';
-//
-// class BooksForm extends React.Component {
-//
-//     handleSubmit() {
-//         const book = [
-//             {
-//                 title: findDOMNode(this.refs.title).value,
-//                 description: findDOMNode(this.refs.description).value,
-//                 price: findDOMNode(this.refs.price).value
-//             }
-//         ]
-//         this.props.postBooks(book);
-//     }
-//
-//     onDelete() {
-//         let bookId = findDOMNode(this.refs.delete).value;
-//         this.props.deleteBooks(bookId);
-//     }
-//
-//     render() {
-//         const booksList = this.props.books.map(function(booksArr) {
-//             return (
-//                 <option key={booksArr._id}>{booksArr._id}</option>
-//             )
-//         })
-//         return (
-//             <Well>
-//                 <Panel>
-//                     <FormGroup controlId="title">
-//                         <ControlLabel>Title</ControlLabel>
-//                         <FormControl type="text" placeholder="Enter Title" ref="title"/>
-//                     </FormGroup>
-//                     <FormGroup controlId="description">
-//                         <ControlLabel>Description</ControlLabel>
-//                         <FormControl type="text" placeholder="EnterDescription" ref="description"/>
-//                     </FormGroup>
-//                     <FormGroup controlId="price">
-//                         <ControlLabel>Price</ControlLabel>
-//                         <FormControl type="text" placeholder="Enter Price" ref="price"/>
-//                         <Button onClick={this.handleSubmit.bind(this)} bsStyle="primary">Save book</Button>
-//                     </FormGroup>
-//                 </Panel>
-//                 <Panel >
-//                     <FormGroup controlId="formControlsSelect">
-//                         <ControlLabel>Select a book id to delete</ControlLabel>
-//                         <FormControl ref="delete" componentClass="select" placeholder="select">
-//                             <option valuedf="select">select</option>
-//                             {booksList}
-//                         </FormControl>
-//                     </FormGroup>
-//                     <Button onClick={this.onDelete.bind(this)} bsStyle="danger">Delete book</Button>
-//                 </Panel>
-//             </Well>
-//         )
-//     }
-// }
-// function mapStateToProps(state) {
-//     return {books: state.books.books}
-// }
-// function mapDispatchToProps(dispatch) {
-//     return bindActionCreators({
-//         postBooks,
-//         deleteBooks
-//     }, dispatch)
-// }
-// export default connect(mapStateToProps, mapDispatchToProps)(BooksForm);
 
 
 
@@ -12849,14 +12741,12 @@ var Cart = function (_React$Component) {
     }, {
         key: 'onDelete',
         value: function onDelete(_id) {
-            // Create a copy of the current array of
 
             var currentBookToDelete = this.props.cart;
             // Determine at which index in books
             var indexToDelete = currentBookToDelete.findIndex(function (cart) {
                 return cart._id === _id;
             });
-            //use slice to remove the book at the
             var cartAfterDelete = [].concat(_toConsumableArray(currentBookToDelete.slice(0, indexToDelete)), _toConsumableArray(currentBookToDelete.slice(indexToDelete + 1)));
             this.props.deleteCartItem(cartAfterDelete);
         }
@@ -23938,14 +23828,7 @@ var _main2 = _interopRequireDefault(_main);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// STEP 1 create the store
-
-// IMPORT COMBINED REDUCERS
-
-// REACT-ROUTER
 var middleware = (0, _redux.applyMiddleware)(_reduxThunk2.default, (0, _reduxLogger2.default)());
-// IMPORT ACTIONS
-
 var store = (0, _redux.createStore)(_index2.default, middleware);
 
 var Routes = _react2.default.createElement(
@@ -24135,7 +24018,6 @@ exports.default = Menu;
 "use strict";
 
 
-
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -24226,12 +24108,12 @@ var BookItem = function (_React$Component) {
                     null,
                     _react2.default.createElement(
                         _reactBootstrap.Col,
-                        { xs: 12, sm: 12 },
+                        { xs: 12, sm: 4 },
                         _react2.default.createElement(_reactBootstrap.Image, { src: this.props.images, responsive: true })
                     ),
                     _react2.default.createElement(
                         _reactBootstrap.Col,
-                        { xs: 12, sm: 12 },
+                        { xs: 6, sm: 8 },
                         _react2.default.createElement(
                             'h6',
                             null,
@@ -24304,8 +24186,6 @@ function booksReducers() {
 
   switch (action.type) {
     case "GET_BOOKS":
-      // let books = state.books.concat(action.payload);
-      //return {books};
       return _extends({}, state, { books: [].concat(_toConsumableArray(action.payload)) });
       break;
     case "POST_BOOK":
@@ -24318,29 +24198,22 @@ function booksReducers() {
       return _extends({}, state, { msg: null, style: 'primary', validation: null });
       break;
     case "DELETE_BOOK":
-      // Create a copy of the current array of books
       var currentBookToDelete = [].concat(_toConsumableArray(state.books));
-      // Determine at which index in books array is the book to be deleted
       var indexToDelete = currentBookToDelete.findIndex(function (book) {
         return book._id == action.payload;
       });
-      //use slice to remove the book at the specified index
       return { books: [].concat(_toConsumableArray(currentBookToDelete.slice(0, indexToDelete)), _toConsumableArray(currentBookToDelete.slice(indexToDelete + 1))) };
       break;
 
     case "UPDATE_BOOK":
-      // Create a copy of the current array of books
       var currentBookToUpdate = [].concat(_toConsumableArray(state.books));
-      // Determine at which index in books array is the book to be deleted
       var indexToUpdate = currentBookToUpdate.findIndex(function (book) {
         return book._id === action.payload._id;
       });
-      // Create a new book object with the new values and with the same array index of the item we want to replace. To achieve this we will use ...spread but we could use concat methos too
       var newBookToUpdate = _extends({}, currentBookToUpdate[indexToUpdate], {
         title: action.payload.title
-        // This Log has the purpose to show you how newBookToUpdate looks like
-      });console.log("what is it newBookToUpdate", newBookToUpdate);
-      //use slice to remove the book at the specified index, replace with the new object and concatenate witht he rest of items in the array
+      });
+      console.log("what is it newBookToUpdate", newBookToUpdate);
       return { books: [].concat(_toConsumableArray(currentBookToUpdate.slice(0, indexToUpdate)), [newBookToUpdate], _toConsumableArray(currentBookToUpdate.slice(indexToUpdate + 1))) };
       break;
   }

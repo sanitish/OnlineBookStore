@@ -50,10 +50,10 @@ class BookItem extends React.Component {
         return (
             <Well>
                 <Row>
-                    <Col xs={12} sm={12}>
+                    <Col xs={12} sm={4}>
                         <Image src={this.props.images} responsive/>
                     </Col>
-                    <Col xs={12} sm={12}>
+                    <Col xs={6} sm={8}>
                         <h6>{this.props.title}</h6>
                         <p>{(this.props.description.length > 50 && this.state.isClicked === false)
                                 ? (this.props.description.substring(0, 50))
