@@ -1,5 +1,6 @@
 "use strict"
 import React from 'react';
+import Payments from './payments'
 import {connect} from 'react-redux';
 import {
     Modal,
@@ -41,6 +42,7 @@ class Cart extends React.Component {
             this.props.updateCart(_id, -1,this.props.cart);
         }
     }
+
     render() {
         if (this.props.cart[0]) {
             return this.renderCart();
@@ -89,10 +91,7 @@ class Cart extends React.Component {
                 <Row>
                     <Col xs={12}>
                         <h6>Total amount: {this.props.totalAmount}</h6>
-                        <Button
-                        bsStyle="success" bsSize="small">
-                            PROCEED TO CHECKOUT
-                        </Button>
+                      <Payments money={this.props.totalAmount}/>
                     </Col>
                 </Row>
             </Panel>

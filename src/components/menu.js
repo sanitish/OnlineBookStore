@@ -8,6 +8,7 @@ class Menu extends React.Component {
             <Navbar inverse fixedTop>
                 <Navbar.Header>
                     <Navbar.Brand>
+                    
                         <a href="/">BookStore</a>
                     </Navbar.Brand>
                     <Navbar.Toggle/>

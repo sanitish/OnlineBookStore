@@ -2,7 +2,6 @@ import React from 'react';
 import Menu from './components/menu';
 import Footer from './components/footer';
 import {connect} from 'react-redux';
-
 import {bindActionCreators} from 'redux';
 import {getCart} from '../src/actions/cartActions';
 class Main extends React.Component {
